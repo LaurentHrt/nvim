@@ -5,11 +5,10 @@ return {
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     { 'j-hui/fidget.nvim', opts = {} },
-    { 'Bilal2453/luvit-meta', lazy = true },
+    { 'Bilal2453/luvit-meta' },
     { 'folke/neodev.nvim', enabled = false },
     {
       'folke/lazydev.nvim',
-      ft = 'lua', -- only load on lua files
       opts = {
         library = {
           -- See the configuration section for more details
