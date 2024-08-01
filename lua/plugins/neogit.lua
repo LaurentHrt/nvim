@@ -5,11 +5,7 @@ return {
     'sindrets/diffview.nvim', -- optional - Diff integration
     'nvim-telescope/telescope.nvim', -- optional
   },
-  config = function()
-    require('neogit').setup {
-      -- Make neogit crash...
-      -- mappings = { status = { ['<c-t>'] = false } },
-    }
+  opts = function()
     vim.keymap.set('n', '<leader>gs', '<cmd>Neogit kind=auto<CR>', { desc = 'Git status (Neogit)' })
     vim.keymap.set('n', '<leader>gc', '<cmd>Neogit commit<CR>', { desc = 'Git commit (Neogit)' })
     vim.keymap.set('n', '<leader>gp', '<cmd>Neogit pull<CR>', { desc = 'Git pull (Neogit)' })

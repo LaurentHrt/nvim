@@ -26,13 +26,13 @@ return {
     'hrsh7th/cmp-path',
     'onsails/lspkind-nvim',
   },
-  config = function()
+  opts = function()
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
     local lspkind = require 'lspkind'
     luasnip.config.setup {}
 
-    cmp.setup {
+    local opts = {
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
@@ -67,10 +67,10 @@ return {
         { name = 'lazydev', group_index = 0 },
         { name = 'vim-dadbod-completion' },
       },
-      ---@diagnostic disable-next-line: missing-fields
       formatting = {
         format = lspkind.cmp_format(),
       },
     }
+    return opts
   end,
 }
