@@ -68,7 +68,9 @@ return {
         { name = 'vim-dadbod-completion' },
       },
       formatting = {
-        format = lspkind.cmp_format(),
+        format = lspkind.cmp_format {
+          before = require('tailwind-tools.cmp').lspkind_format,
+        },
       },
     }
     return opts
